@@ -26,6 +26,5 @@ void prompt_display(void)
 		user_input == '\0'; */
 	
 	tokenise(user_input);}
-
 	free(user_input);
 }

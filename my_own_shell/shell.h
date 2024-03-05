@@ -12,7 +12,7 @@
 void prompt_display(void);
 int main(int argc, char **argv);
 char *tokenise(char *string);
-int exec(void);
+int exec(char *token);
 
 
 

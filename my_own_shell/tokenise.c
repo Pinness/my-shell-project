@@ -7,7 +7,9 @@ char *tokenise(char *string)
 	char *token;
 
 	token = strtok(string, delim);
-	printf("%s\n", token);
+
+	  /**execute the token generated*/
+	/**printf("%s\n", token); the command is ot suppose to be printed out**/
 	/**token = strtok(NULL, delim);
 	printf("%s ", token);
 	token = strtok(NULL, delim);
@@ -16,7 +18,9 @@ char *tokenise(char *string)
 	while ((token = strtok(NULL, delim)) != NULL)
 	{
 		/**token = strtok(NULL, delim);*/
-		         printf("%s\n", token);
+	
+		/**printf("%s\n", token);  instead of printing i want to execute**/
+		exec(token);
 	}
 
 	
