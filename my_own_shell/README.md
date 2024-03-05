@@ -1,0 +1,1 @@
+This project is a basic implementation of a simple shell program in the C programming language. The shell provides a command-line interface where users can interact with the operating system by executing commands.
