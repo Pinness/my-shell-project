@@ -1,6 +1,6 @@
 #include "shell.h"
 
-char *tokenise(char *string)
+char *tokenise(char *pathname, char *string)
 {
 	/**char *string; **/
 	const char *delim = " ";
@@ -15,15 +15,16 @@ char *tokenise(char *string)
 	token = strtok(NULL, delim);
 	printf("%s\n", token);**/
 	/**while (token != NULL)**/
-	while ((token = strtok(NULL, delim)) != NULL)
+	while (token != NULL)
 	{
 		/**token = strtok(NULL, delim);*/
 	
 		/**printf("%s\n", token);  instead of printing i want to execute**/
-		exec(token);
+		exec(pathname, token);
+		token = strtok(NULL, delim);
 	}
 
 	
 
-	return (token);
+	return (NULL);
 }

@@ -1,13 +1,12 @@
 #include "shell.h"
 
-int exec(char *user_input)
-{
-	char *const pathname = "token[0]";
-	char *const argv[] = {"token[1]", NULL};
+int exec(char *pathname, char *command)
+{	
+
+	char *const argv[] = {*command, NULL};
 	 char *const envp[] = {NULL};
 
-	char *token = tokenise(user_input); 
-	printf("%s\n", token);
+	/**char *token = tokenise(user_input);**/ 
 
 
 	execve(pathname, argv, envp);
