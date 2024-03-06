@@ -1,12 +1,13 @@
-#include "shell.h"
+/**
+ * #include "shell.h"
 
 char *tokenise(char *pathname, char *string)
 {
 	/**char *string; **/
-	const char *delim = " ";
-	char *token;
+/**	const char *delim = " ";
+/**	char *token;
 
-	token = strtok(string, delim);
+/**	token = strtok(string, delim);
 
 	  /**execute the token generated*/
 	/**printf("%s\n", token); the command is ot suppose to be printed out**/
@@ -15,16 +16,16 @@ char *tokenise(char *pathname, char *string)
 	token = strtok(NULL, delim);
 	printf("%s\n", token);**/
 	/**while (token != NULL)**/
-	while (token != NULL)
+/**	while (token != NULL)
 	{
 		/**token = strtok(NULL, delim);*/
 	
 		/**printf("%s\n", token);  instead of printing i want to execute**/
-		exec(pathname, token);
-		token = strtok(NULL, delim);
-	}
+/**		exec(pathname, token);/**
+/**		token = strtok(NULL, delim);
+/**	}**/
 
 	
 
-	return (NULL);
-}
+/**	return (0);
+}**/

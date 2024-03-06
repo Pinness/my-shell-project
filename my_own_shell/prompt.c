@@ -2,13 +2,15 @@
 #include  "shell.h"
 
 
-void prompt_display(char *pathname)
+void prompt_display()
 {
 	ssize_t num_of_xter;
 	char * user_input = NULL;
 	size_t n = 0;
+	char *token;
+	char *delim = " \n";
 
-	{
+	
 		printf("Piness$ ");
 	
 
@@ -21,7 +23,10 @@ void prompt_display(char *pathname)
 	/*if(user_input == '\n')
 		user_input == '\0'; */
 	
-	tokenise(user_input, pathname);
-	}
+	token = strtok(user_input, delim);
+	
+
+	exec(token);
+
 	free(user_input);
 }

@@ -9,10 +9,10 @@
 #include <unistd.h>
 
 
-void prompt_display(char *pathname);
-int main(int argc, char **argv);
-char *tokenise(char *string, char *pathname);
-int exec(char *pathname, char *command);
+void prompt_display(void);
+int main(int argc, char *argv[]);
+/**char *tokenise(char *string, char *pathname);**/
+int exec(char *pathname);
 
 
 

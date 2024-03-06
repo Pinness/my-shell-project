@@ -4,8 +4,9 @@
 
 int main (int argc, char *argv[])
 {
-	char *pathname = "/usr/bin/ls";
-	
-	prompt_display(pathname);
+	while (1)
+	{
+		prompt_display();
+	}
 	return (0);
 }
