@@ -9,11 +9,11 @@ void prompt_display()
 	size_t n = 0;
 	char *token;
 	char *delim = " \n";
+	pid_t new_proces;
 
-	
-		printf("Piness$ ");
-	
 
+	printf("Piness$ ");
+	
 	num_of_xter = getline(&user_input, &n, stdin);
 
 	if (num_of_xter == -1)
@@ -26,7 +26,12 @@ void prompt_display()
 	token = strtok(user_input, delim);
 	
 
-	exec(token);
+	new_proces = fork();
+	if (new_proces == 0)
+	{
+		if(exec(token) == -1);
+		perror("execve");
+	}
 
 	free(user_input);
 }
